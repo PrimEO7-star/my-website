@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#100512">
+<title>For Momo ❤️</title>
+<style>
+:root{--bg:#100512;--pink:#ff5c93;--rose:#ff9dbb;--cream:#fff4f7}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--cream);background:#100512}
+.app{position:relative;width:100%;height:100dvh;overflow:hidden;background:radial-gradient(circle at 20% 10%,rgba(255,72,139,.22),transparent 30%),radial-gradient(circle at 85% 85%,rgba(170,61,255,.18),transparent 32%),linear-gradient(145deg,#100512,#250918 55%,#09030d)}
+.app:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 180deg,transparent,rgba(255,105,150,.08),transparent 25%,rgba(164,88,255,.06),transparent 55%);animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.progress{position:absolute;z-index:30;top:max(14px,env(safe-area-inset-top));left:18px;right:18px;display:flex;gap:5px}.progress i{height:3px;flex:1;border-radius:99px;background:rgba(255,255,255,.16);transition:.5s}.progress i.active{background:linear-gradient(90deg,#ff5c93,#ffd0dc);box-shadow:0 0 10px #ff5c93}
+.sound{position:absolute;z-index:40;right:17px;top:max(38px,calc(env(safe-area-inset-top) + 38px));width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:18px;backdrop-filter:blur(12px)}
+.sound.on{box-shadow:0 0 20px rgba(255,92,147,.5)}
+.page{position:absolute;inset:0;padding:76px 22px 88px;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateX(18%) scale(.97);pointer-events:none;transition:opacity .65s ease,transform .65s cubic-bezier(.22,.8,.2,1)}
+.page.active{opacity:1;transform:none;pointer-events:auto}.page.exit{opacity:0;transform:translateX(-18%) scale(.97)}
+.content{width:min(100%,430px);position:relative;z-index:3}.kicker{text-transform:uppercase;letter-spacing:3px;font-size:10px;color:var(--rose);margin-bottom:12px}
+h1{font-size:clamp(40px,12vw,66px);line-height:.95;margin:0 0 18px;font-weight:800;letter-spacing:-2px;text-shadow:0 0 30px rgba(255,92,147,.25)}
+h2{font-size:clamp(29px,9vw,48px);line-height:1.02;margin:0 0 16px}p{font-size:15.5px;line-height:1.72;color:#efd6de;margin:0 auto;max-width:370px}
+.glow{position:absolute;width:230px;height:230px;border-radius:50%;background:#ff4d8b;filter:blur(90px);opacity:.18;animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.25);opacity:.28}}
+.btn{margin-top:27px;border:0;border-radius:999px;padding:15px 23px;color:#2b0616;font-weight:800;font-size:15px;background:linear-gradient(135deg,#fff,#ffb7cb);box-shadow:0 10px 30px rgba(255,92,147,.28);cursor:pointer;min-width:195px}.btn:active{transform:scale(.96)}
+.small{font-size:12px;color:#cda9b5;margin-top:12px}
+.heart-orbit{width:180px;height:180px;margin:0 auto 24px;position:relative}.heart-core{font-size:90px;filter:drop-shadow(0 0 22px rgba(255,70,130,.75));animation:heartBeat 1.4s ease-in-out infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.07)}}.ring{position:absolute;inset:8px;border:1px solid rgba(255,180,205,.25);border-radius:50%;animation:orbit 7s linear infinite}.ring:after{content:"❤";position:absolute;top:-8px;left:50%;font-size:16px;color:#ff7ca5}@keyframes orbit{to{transform:rotate(360deg)}}
+.photo-frame{position:relative;width:min(80vw,330px);height:min(72vw,390px);margin:0 auto 21px;border-radius:25px;overflow:hidden;border:7px solid rgba(255,255,255,.9);box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 45px rgba(255,70,130,.16);transform:rotate(-2deg);animation:photoFloat 5s ease-in-out infinite;background:#222}
+.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.16),transparent 35%,rgba(255,92,147,.12));pointer-events:none}.photo-frame img{width:100%;height:100%;object-fit:cover}
+@keyframes photoFloat{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-9px)}}
+.quote{font-size:17px;line-height:1.65;font-style:italic;color:#fff1f5;padding:19px;border-radius:22px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 0 40px rgba(255,92,147,.04)}
+.promise{display:grid;gap:9px;text-align:left;margin-top:18px}.promise div{padding:12px 14px;border-radius:15px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:#f4dbe3;font-size:14px}.promise b{color:#ff9fba;margin-right:8px}
+.final-heart{font-size:112px;animation:heartBeat 1.2s infinite;filter:drop-shadow(0 0 35px rgba(255,62,129,.8))}.signature{font-family:cursive;font-size:27px;color:#ffabc2;margin-top:23px}
+.hint{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));left:0;right:0;color:#a9808e;font-size:11px;z-index:10}
+.hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}.float-heart{position:absolute;bottom:-40px;color:#ff719e;opacity:.55;animation:rise linear forwards;text-shadow:0 0 15px rgba(255,93,147,.7)}
+@keyframes rise{to{transform:translateY(-115vh) translateX(var(--drift)) rotate(360deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="progress" id="progress"></div><button class="sound" id="sound" aria-label="Toggle music">♫</button><div class="hearts" id="hearts"></div>
+
+<section class="page active"><div class="content"><div class="glow"></div><div class="heart-orbit"><div class="ring"></div><div class="heart-core">❤️</div></div><div class="kicker">For my cutie Momo</div><h1>Hey Momo…</h1><p>I made this little corner of the internet just to tell you something from my heart.</p><button class="btn next">Open My Heart ✨</button><div class="small">Tap to begin</div></div></section>
+
+<section class="page"><div class="content"><div class="kicker">First, I need to say this</div><h2>I'm Sorry, Momo. ❤️</h2><p>I know tumi rege gecho kaal… and ami jani amar voice raise kora tomake hurt koreche. For that, genuinely, I am sorry.</p><button class="btn next">Read My Heart →</button></div></section>
+
+<section class="page"><div class="content"><div class="photo-frame"><img src="momo-photo.jpg" alt="A special memory of Momo"></div><div class="kicker">Why I reacted that way</div><h2>Ami Prochondo Chinta Kori…</h2><p>Jate Momo-r kichu na hoy, tai atobar bolchhilam. Jokhon tumi shunchhile na, tokhon amar tension theke ami awaz ta raise korechhilam.</p><button class="btn next">But I Know… →</button></div></section>
+
+<section class="page"><div class="content"><div class="kicker">I don't want an excuse</div><div class="quote">“Concern chhilo, but amar tone thik chhilo na. Tumi amar kotha shonar age amar voice ta feel korechho — and I'm really sorry for that.”</div><div class="promise"><div><b>♥</b> Tumar feelings-ke ami respect korbo.</div><div><b>♥</b> Tension holeo calmly kotha bolbo.</div><div><b>♥</b> Shudhu bhalobasha noy, bhalobashar sathe patience-o dekhabo.</div></div><button class="btn next">One More Thing →</button></div></section>
+
+<section class="page"><div class="content"><div class="kicker">Please remember this</div><h2>Tomar Kichu Hole…</h2><p>…amar tension hoy, because tumi amar kache khub important. But that doesn't give me an excuse to hurt you. I want to care for you in a way that makes you feel safe, not pressured.</p><div class="heart-orbit" style="margin-top:18px"><div class="ring"></div><div class="heart-core">💗</div></div><button class="btn next">Last Page →</button></div></section>
+
+<section class="page"><div class="content"><div class="final-heart">❤️</div><div class="kicker">My last words for tonight</div><h2>I Am Really Sorry, Momo.</h2><p>I love you, my cutie Momo. Ami chai tumi jano je amar care ta real — and from now on, I'll try to show that care with a softer voice, more patience, and more understanding.</p><div class="signature">Sorry, my cutie Momo. ♡</div><button class="btn" id="restart">Read It Again ↻</button></div></section>
+
+<div class="hint">Swipe left/right • or use the button</div>
+</div>
+<script>
+const pages=[...document.querySelectorAll('.page')], progress=document.querySelector('#progress');
+const bars=pages.map((_,i)=>{const e=document.createElement('i');progress.appendChild(e);return e});
+let current=0,audioCtx=null,musicOn=false,timer=null;
+function showPage(n){n=Math.max(0,Math.min(pages.length-1,n));if(n===current&&pages[current].classList.contains('active'))return;pages[current].classList.remove('active');pages[current].classList.add('exit');const old=current;setTimeout(()=>pages[old].classList.remove('exit'),650);current=n;pages[current].classList.add('active');bars.forEach((b,i)=>b.classList.toggle('active',i<=current));burst()}
+bars[0].classList.add('active');
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{startMusic();showPage(current+1)}));
+document.querySelector('#restart').addEventListener('click',()=>showPage(0));
+let sx=0,sy=0;document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)){if(dx<0)showPage(current+1);else showPage(current-1)}},{passive:true});
+function makeHeart(){const h=document.createElement('span');h.className='float-heart';h.textContent=['♥','❤','♡','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=(12+Math.random()*22)+'px';h.style.setProperty('--drift',(Math.random()*140-70)+'px');h.style.animationDuration=(5+Math.random()*6)+'s';document.querySelector('#hearts').appendChild(h);setTimeout(()=>h.remove(),12000)}
+function burst(){for(let i=0;i<12;i++)setTimeout(makeHeart,i*80)}setInterval(makeHeart,650);burst();
+function startMusic(){if(musicOn)return;musicOn=true;document.querySelector('#sound').classList.add('on');try{audioCtx=new(window.AudioContext||window.webkitAudioContext)();const master=audioCtx.createGain();master.gain.value=.035;master.connect(audioCtx.destination);const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;function play(){const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(0,audioCtx.currentTime);g.gain.linearRampToValueAtTime(.5,audioCtx.currentTime+.12);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.5);o.connect(g);g.connect(master);o.start();o.stop(audioCtx.currentTime+1.55)}play();timer=setInterval(play,1200)}catch(e){}}
+document.querySelector('#sound').addEventListener('click',()=>{if(!audioCtx){startMusic();return}if(audioCtx.state==='running'){audioCtx.suspend();document.querySelector('#sound').classList.remove('on')}else{audioCtx.resume();document.querySelector('#sound').classList.add('on')}})
+</script>
+</body>
+</html>
